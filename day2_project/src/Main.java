@@ -1,15 +1,24 @@
-//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
-// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+import franchise.Food;
+import franchise.Store;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP 캐럿을 강조 표시된 텍스트에 놓고 <shortcut actionId="ShowIntentionActions"/>을(를) 누르면
-        // IntelliJ IDEA이(가) 수정을 제안하는 것을 확인할 수 있습니다.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP <shortcut actionId="Debug"/>을(를) 눌러 코드 디버그를 시작하세요. 1개의 <icon src="AllIcons.Debugger.Db_set_breakpoint"/> 중단점을 설정해 드렸습니다
-            // 언제든 <shortcut actionId="ToggleLineBreakpoint"/>을(를) 눌러 중단점을 더 추가할 수 있습니다.
-            System.out.println("i = " + i);
-        }
+        String[] f1ma = {"샷","얼음","물"};
+        Food f1 = new Food("아메리카노", 1000, f1ma);
+        String[] f2ma = {"샷","얼음","우유"};
+        Food f2 = new Food("라떼", 2000, f2ma);
+        Food[] farr = {f1,f2,null,null,null,null,null};
+        Store store = new Store("메머드", 9, 19, farr);
+        store.print();
+        Food f =new Food("슬러쉬", 3000, null);
+        System.out.println(store.addMenu(f));
+        // 총 수가 올라가야 하고 , 총 금액 올라가야하고 , 평균 도 올라가야하고
+        store.print();
+//        이거로 잘들어 갔나 확인도 해보고
+        System.out.println(store.getMenuArr());
+        System.out.println(store.removeMenu("아메리카노"));
+        store.print();
+//        이거로 잘들어 갔나 확인도 해보고
+        System.out.println(store.getMenuArr());
     }
 }
