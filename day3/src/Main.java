@@ -20,7 +20,7 @@ public class Main{
         list.add(5);
         list.add(4);
         list.add(9);
-        int target = 14;
+        int target = 9;
 //      안에 있는 수 2개 더해서 target 이 되어야함
 //      1 =< list 안에 있는 수 =< 10
 //       answer는 순서 x
@@ -28,13 +28,11 @@ public class Main{
         Set<Integer> set = new HashSet<>();
         for (int num : list) {
             set.add(num);
-            if (set.contains(num)) {
                 if (set.contains(target - num)) {
                     answer[0] = target - num;
                     answer[1] = num;
                     break;
                 }
-            }
         }
 //        Integer[] tmp = new Integer[11];
 //        for(int i=0;i<list.size();i++){
