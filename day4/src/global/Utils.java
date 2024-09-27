@@ -1,5 +1,7 @@
 package global;
 
+import controller.CafeController;
+
 import java.util.Scanner;
 
 public class Utils {
